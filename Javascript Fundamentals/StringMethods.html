@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ages = [21, 4, 224, 34, 45, 7, 67];
+      ages.sort((a, b) => a - b);
+      let rangeOfAges =
+        ages.slice(ages.length - 1, ages.length)[0] - ages.slice(0, 1)[0];
+      console.log(rangeOfAges);
+    </script>
+  </body>
+</html>
