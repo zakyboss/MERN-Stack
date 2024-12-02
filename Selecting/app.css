@@ -26,3 +26,18 @@ img.square {
 .tocnumber {
     color: black;
 }
+#button {
+    background-color: aqua;
+}
+/* #box{
+    background-color: blue;
+    width: 100px;
+    display: none;
+    font-size: 22px;
+} */
+.list{
+    width:200px ;
+    font-size: 22px;
+    list-style: none;
+    /* display: none; */
+}
