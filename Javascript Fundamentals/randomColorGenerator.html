@@ -8,29 +8,46 @@
   <body>
     <div><button id="btn">click me!</button></div>
     <script>
+      //   let btn = document.querySelector("#btn");
+      //   btn.addEventListener("click", function () {
+      //     let colors = [
+      //       "Yellow",
+      //       "Blue",
+      //       "Green",
+      //       "pink",
+      //       "purple",
+      //       "Orange",
+      //       "aquamarine",
+      //     ];
+
+      //     // colors.forEach(function (el) {
+      //     //   let num = Math.floor(Math.random() * colors.length + 1);
+
+      //     //   document.body.style.backgroundColor = colors[num];
+      //     // });
+      //     for (let i = 0; i < colors.length; i++) {
+      //       let num = Math.floor(Math.random() * colors.length);
+
+      //       document.body.style.backgroundColor = colors[num];
+      //     }
+      //   });
+
       let btn = document.querySelector("#btn");
+      btn.style.marginLeft = "50%";
+      let h1 = document.createElement("h1");
+      h1.style.marginLeft = "50%";
+      btn.insertAdjacentElement("beforebegin", h1);
       btn.addEventListener("click", function () {
-        let colors = [
-          "Yellow",
-          "Blue",
-          "Green",
-          "pink",
-          "purple",
-          "Orange",
-          "aquamarine",
-        ];
-
-        // colors.forEach(function (el) {
-        //   let num = Math.floor(Math.random() * colors.length + 1);
-
-        //   document.body.style.backgroundColor = colors[num];
-        // });
-        for (let i = 0; i < colors.length; i++) {
-          let num = Math.floor(Math.random() * colors.length + 1);
-
-          document.body.style.backgroundColor = colors[num];
-        }
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+        let color = `rgb(${red},${green},${blue})`;
+        document.body.style.backgroundColor = color;
+        h1.textContent = color;
+        console.log(color);
       });
+
+      let;
     </script>
   </body>
 </html>
