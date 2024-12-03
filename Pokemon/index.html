@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon</title>
-    <link rel="stylesheet" href="app.css">
-</head>
+    <link rel="stylesheet" href="app.css" />
+    <style>
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .pokemon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+      }
+    </style>
+  </head>
 
-<body>
-    <h1>Look at my pokemon!</h1>
+  <body>
+    <h1>Look at my Pokémon!</h1>
     <section id="container"></section>
-    <script src="app.js"></script>
-</body>
+    <script>
+      let container = document.querySelector("#container");
+      let baseUrl =
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
+      for (let i = 1; i < 151; i++) {
+        // Create a wrapper div for each Pokémon
+        let pokemonDiv = document.createElement("div");
+        pokemonDiv.classList.add("pokemon");
+
+        // Create the Pokémon image
+        let pokemonImage = document.createElement("img");
+        pokemonImage.src = `${baseUrl}${i}.png`;
+
+        // Create the number span
+        let numberSpan = document.createElement("span");
+        numberSpan.textContent = `#${i}`;
+
+        // Append the image and span to the wrapper div
+        pokemonDiv.appendChild(pokemonImage);
+        pokemonDiv.appendChild(numberSpan);
+
+        // Append the wrapper div to the container
+        container.appendChild(pokemonDiv);
+      }
+    </script>
+  </body>
 </html>
