@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #btn {
+        padding: 5px;
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
-    <div><button id="btn">click me!</button></div>
+    <div id="myDiv"></div>
     <script>
       //   let btn = document.querySelector("#btn");
       //   btn.addEventListener("click", function () {
@@ -31,23 +37,29 @@
       //       document.body.style.backgroundColor = colors[num];
       //     }
       //   });
-
-      let btn = document.querySelector("#btn");
-      btn.style.marginLeft = "50%";
-      let h1 = document.createElement("h1");
-      h1.style.marginLeft = "50%";
-      btn.insertAdjacentElement("beforebegin", h1);
-      btn.addEventListener("click", function () {
+      let makeRandColor = function () {
         let red = Math.floor(Math.random() * 256);
         let green = Math.floor(Math.random() * 256);
         let blue = Math.floor(Math.random() * 256);
         let color = `rgb(${red},${green},${blue})`;
-        document.body.style.backgroundColor = color;
-        h1.textContent = color;
-        console.log(color);
-      });
-
-      let;
+        return color;
+      };
+      let colorize = function () {
+        this.style.backgroundColor = makeRandColor();
+        this.style.color = makeRandColor();
+      };
+      for (let i = 0; i < 50; i++) {
+        let myDiv = document.getElementById("myDiv");
+        let btn = document.createElement("button");
+        btn.textContent = "click me !";
+        btn.id = "btn";
+        myDiv.append(btn);
+        let myH1 = document.createElement("h1");
+        myH1.textContent = "I am a H1 ";
+        myDiv.insertAdjacentElement("afterend", myH1);
+        btn.addEventListener("click", colorize);
+        myH1.addEventListener("click", colorize);
+      }
     </script>
   </body>
 </html>
