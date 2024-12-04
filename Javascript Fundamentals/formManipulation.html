@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        height: 300px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form action="" id="form">
+        <h1>Welcome to Cat Adoption Center</h1>
+        <label for="catName">Cat Name</label>
+        <input type="text" id="txt" />
+        <button type="submit" id="button">submit</button>
+      </form>
+      <section id="cat names">
+        <ul id="availableCats">
+          Available
+          <span id="plural">cat</span>
+        </ul>
+      </section>
+    </div>
+    <script>
+      let form = document.querySelector("#form");
+      let count = 1; // Declare count outside the event listener to maintain its value
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let input = document.querySelector("#txt");
+        let ul = document.querySelector("#availableCats");
+        let list = document.createElement("li");
+
+        list.textContent = `${count++} : ${input.value}`; // Increment count and use input value
+        list.id = "list";
+        list.style.listStyle = "none";
+        ul.append(list);
+
+        input.value = ""; // Clear the input field
+        if (count > 2) {
+          let plural = document.querySelector("#plural");
+          plural.textContent = "cats";
+        }
+        console.log(list);
+      });
+    </script>
+  </body>
+</html>
