@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ping Pong Game</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div id="container">
+        <div id="imageContainer">
+          <img src="pic/download (1).jpg" alt="" srcset="" id="img" />
+        </div>
+        <div id="game">
+          <h3 id="win">Get Set , Ready , Play 😎</h3>
+          <label for="playTo" id="playToLabel">Play to:</label>
+          <select id="playTo">
+            <!-- Dropdown options -->
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <br />
+          <h4 id="round">Round 1</h4>
+          <h3 id="to">0 to 0</h3>
+          <button>+1Player1</button>
+          <button>+1Player2</button>
+          <button>Reset</button>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
