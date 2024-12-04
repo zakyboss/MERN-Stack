@@ -1,0 +1,92 @@
+#container{
+    height: 600px;
+    margin-left: 270px;
+    margin-right: 270px;
+    background-color: antiquewhite;
+}
+#imageContainer{
+    height: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: olive;
+    border-radius: 20px;
+}
+#imageContainer>img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+#game{
+text-align: center;
+}
+    #playTo {
+        width: 100px; /* Adjust width to your preference */
+        padding: 10px; /* Add padding for better spacing */
+        font-size: 16px; /* Adjust font size */
+        border: 2px solid #007BFF; /* Add a border with a color */
+        border-radius: 5px; /* Round the corners */
+        background-color: #f8f9fa; /* Light background color */
+        color: #212529; /* Text color */
+        outline: none; /* Remove the default focus outline */
+        cursor: pointer; /* Change cursor to pointer */
+        transition: all 0.3s ease; /* Smooth hover effect */
+      }
+    
+      /* Add hover effect */
+      #playTo:hover {
+        background-color: #e2e6ea; /* Slightly darker background on hover */
+        border-color: #0056b3; /* Change border color on hover */
+      }
+    
+      /* Add focus effect */
+      #playTo:focus {
+        border-color: #0056b3; /* Highlight border on focus */
+        box-shadow: 0 0 5px rgba(0, 91, 187, 0.5); /* Add a shadow */
+      }
+#playToLabel{
+    margin-left: -170px;
+
+}
+button {
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 16px; /* Adjust font size for readability */
+    font-weight: bold; /* Make the text bold */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* White text color for contrast */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+
+  /* Player 1 Button */
+  #player1Btn {
+    background-color: rgb(97, 83, 228);
+  }
+  #player1Btn:hover {
+    background-color: rgb(75, 64, 200); /* Slightly darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  }
+
+  /* Player 2 Button */
+  #player2Btn {
+    background-color: rgb(162, 61, 230);
+  }
+  #player2Btn:hover {
+    background-color: rgb(140, 50, 200); /* Slightly darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  }
+
+  /* Reset Button */
+  #resetBtn {
+    background-color: rgb(245, 29, 83);
+  }
+  #resetBtn:hover {
+    background-color: rgb(215, 20, 70); /* Slightly darker shade on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  }
+
+  button:active {
+    transform: translateY(2px); /* Make button appear pressed */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+  }
